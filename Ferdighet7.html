@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Ferdighet 7a</title>
+    <title>Ferdighet 7</title>
     <style>
         div {
             margin: auto;
@@ -17,36 +17,33 @@
     </style>
 </head>
 <body>
-    <h1>Ferdighet 7a</h1>
-    <h2>Refresh siden for random størrelser</h2>
-    <hr></hr>
-
+    <p>Ferdighet 7</p>
+    <input id="width" type="range" min="1" max="1000" step="1" oninput="showDiv()"/>
+    <input id="height" type="range" min="1" max="1000" step="1" oninput="showDiv()"/>
 
     <div id="resultat"></div>
-    <br>
     <div id="resultatHtmlDiv"></div>
 
     <script>
+        var width = document.getElementById('width');
+        var height = document.getElementById('height');
         var resultatDiv = document.getElementById('resultat');
         var resultatHtmlDiv = document.getElementById('resultatHtmlDiv');
 
-        // var randomnr = 100 + Math.floor(Math.random() * 10);
-        // var randomnr2 = 100 + Math.floor(Math.random() * 10);
         showDiv();
         function showDiv() {
-            var width = 100 + Math.floor(Math.random() * 10);
-            var height = 100 + Math.floor(Math.random() * 10);
-            var random = 1 + Math.floor(Math.random() * 10);
-
+            var area = width.value * height.value;
+            var perimeter = 2 * width.value + 2 * height.value;
             resultatDiv.innerHTML = '<div style="'
                 + 'background-color: ' + 'blue' + ';'
-                + 'width: ' + width + 'px;'
-                + 'height: ' + height + 'px;'
-                + 'border:' + random + 'px solid black;'
+                + 'width: ' + width.value + 'px;'
+                + 'height: ' + height.value + 'px;'
                 + '">' + '</div>';
                 
-                resultatHtmlDiv.innerText = 'Width:' + width + ';'
-                + 'Height:' + height + ';'
+                resultatHtmlDiv.innerText = 'Width:' + width.value + ';'
+                + 'Height:' + height.value + ';'
+                + 'Area:' + area + ';' 
+                + 'Perimeter:' + perimeter;
         }
     </script>
 </body>
