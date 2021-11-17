@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ferdighet</title>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        h1{  
+            font-size: 100px;
+        }
+        body{
+            background-color:darkgray;
+            text-align: center;
+        }
+        table{
+            border: 2px solid grey;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            padding: 30px;
+            width: 100vw;
+            height: 10vh;
+            text-align: center;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <h1>3 - Nøkkelordet "this"</h1>
+    <hr>
+
+    <table>
+    <tr><td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td>
+        <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td>
+        <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td></tr>
+
+    <tr><td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td>
+        <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td>
+        <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td></tr>
+
+    <tr><td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td>
+        <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td>
+        <td onmouseover="doSomething(this)" onmouseout="doSomethingElse(this)">o</td></tr>
+        
+    </table>
+    <hr>
+
+    <script>
+        function doSomething(element) {
+            element.innerHTML = 'x'
+        }
+        function doSomethingElse(element) {
+            element.innerHTML ='o'
+        }
+    </script>
+</body>
+</html>

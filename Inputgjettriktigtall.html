@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        body{
+            background-color:lightslategray;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title>Hint: Svaret er 1</title>
+</head>
+<body>
+    <h1 style="font-size: 50px;">Gjett riktig tall</h1>
+    
+    <input onchange="tall(this.value)">
+
+    <script>
+
+        let password ="1";
+
+        function tall(element){
+
+        if(element == password){
+            alert("Riktig!");
+            location.reload();
+        }
+
+        else{
+            alert("Feil");
+            location.reload();
+        }
+
+        }
+    </script>
+</body>
+</html>

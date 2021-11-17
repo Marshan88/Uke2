@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferdighet5 Uke2</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        div{
+            text-align:center;
+            font-size: 50px
+            
+        }
+    </style>
+</head>
+<body onload="Onload()">
+    <div id="Onload"> </div>
+    <div id="Img"></div>
+    <img onload="Afterloadimage()" src="https://preview.redd.it/3j8k84hex5d61.png?width=5120&format=png&auto=webp&s=a886ce43d92643f12b0f3ad425a30d9f4ad3a6bb">
+
+    <script>
+        function Onload(){
+            document.getElementById('Onload').innerHTML = 'Onload' + new Date().toTimeString();
+        }
+        function Afterloadimage(){
+            document.getElementById('Img').innerHTML = 'After Load:' + new Date().toTimeString();
+        }
+    </script>
+</body>
+</html>

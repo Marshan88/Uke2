@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    div {
+        font-size: 50px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick, this, parameter</title>
+</head>
+<body>
+        <h1 style="font-size: 100px;">Tirsdags oppgave 26/10/2021</h1>
+        <hr>
+
+        <div onclick="tekst(this, 'pink')">div1</div>    
+        <div onclick="tekst(this, 'orange')">div2</div>
+        <div onclick="tekst(this, 'green')">div3</div>
+        <div onclick="tekst(this, 'blue')">div4</div>
+        <div onclick="tekst(this, 'purple')">div5</div>
+        <div id="ingenTekst"></div>
+    <hr>
+    
+    <script>
+      function tekst(element, color) {
+          console.log("tekstfunksjon");
+          document.getElementById('ingenTekst').innerHTML += `<div style="color: ${color};"> ${element.innerHTML} </div>`;         
+          }
+
+    </script>
+</body>
+</html>
