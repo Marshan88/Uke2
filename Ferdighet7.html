@@ -6,34 +6,34 @@
     <title>Ferdighet 7</title>
 </head>
 <body>
-    <h1>Ferdighet 7</h1>
+    <p>Ferdighet 7</p>
+    <input id="width" type="range" min="1" max="1000" step="1" oninput="showDiv()"/>
+    <input id="height" type="range" min="1" max="1000" step="1" oninput="showDiv()"/>
 
-    <input id="bredde" type="range" min="1" max="1000" step="1" oninput"calculate()" value=2>
-
-    <!-- <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
-    <input id="tallA" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
-    <input id="tallB" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
     <div id="resultat"></div>
+    <div id="resultatHtmlDiv"></div>
+
     <script>
+        var width = document.getElementById('width');
+        var height = document.getElementById('height');
         var resultatDiv = document.getElementById('resultat');
-        var tallAInput = document.getElementById('tallA');
-        var tallBInput = document.getElementById('tallB');
+        var resultatHtmlDiv = document.getElementById('resultatHtmlDiv');
 
-        calculate();
-
-        function calculate() {
-            var tallA = parseInt(tallAInput.value);
-            var tallB = parseInt(tallBInput.value);
-            var sum = tallA + tallB;
-            var differense = tallA - tallB;
-            var produkt = tallA * tallB;
-            var kvotient = tallA / tallB;
-            resultatDiv.innerHTML = '' +
-                tallA + '+' + tallB + '=' + sum + '<br/>' +
-                tallA + '-' + tallB + '=' + differense + '<br/>' +
-                tallA + '*' + tallB + '=' + produkt + '<br/>' +
-                tallA + '/' + tallB + '=' + kvotient;
+        showDiv();
+        function showDiv() {
+            var areal = width.value * height.value;
+            var perimeter = 2 * width.value + 2 * height.value;
+            resultatDiv.innerHTML = '<div style="'
+                + 'background-color: ' + 'blue' + ';'
+                + 'width: ' + width.value + 'px;'
+                + 'height: ' + height.value + 'px;'
+                + '">' + '</div>';
+                
+                resultatHtmlDiv.innerText = 'Width:' + width.value + ';'
+                + 'Height:' + height.value + ';'
+                + 'areal:' + areal + ';' 
+                + 'Perimeter:' + perimeter;
         }
-    </script> -->
+    </script>
 </body>
 </html>
