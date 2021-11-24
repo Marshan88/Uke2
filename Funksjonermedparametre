@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ferdighet 2a (do-over)- Funksjoner med parameter</title>
+</head>
+<body onload="doEverything('onload');">
+
+    <input type="text" placeholder="TA MUSA OVER HER" 
+    onchange="doEverything('onchange');" 
+    oninput="doEverything('oninput');"
+    onmouseover="doEverything('onmouseover');"
+    onmouseout="doEverything('onmouseout');"
+    />
+    <hr>
+    <h3 id="info">HVA SOM HAR SKJEDD:</h3>
+    
+    <script>
+        function doEverything(value){
+            info.innerHTML += `<li>${value}</li>`;
+		//document.getElementById('info').innerHTML += `<li>${value}</li>`;
+        }       
+    </script>
+</body>
+</html>
